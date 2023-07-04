@@ -1,14 +1,38 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <navigation></navigation>
     <router-view/>
   </div>
 </template>
+<script>
+import Nav from '@/components/Nav.vue'
+import '@fortawesome/fontawesome-free/css/all.css'
 
+  export default {
+    name: 'nav-name',
+    // props: {},
+    data: function(){
+        return {}
+    },
+    // computed: {},
+    //methods: {}
+    //watch: {},
+    components: {
+      "navigation": Nav
+    },
+    // mixins: [],
+    // filters: {},
+    // -- Lifecycle Methods
+    // -- End Lifecycle Methods
+  }
+</script>
 <style>
+body{
+  background-image: url("@/assets/ps.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
